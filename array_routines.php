@@ -24,10 +24,13 @@ $a = null; // works
 $a['1'] = 'a'; // works
 
 
+// removing specific index
 $key = 1;
-//unset($a[$key]);
-$a['1'] = 'a';
+unset($a[$key]);
+print_r($a);
 
+
+// removing using a logic - like only odd numbers
 $numbers = [1,2,3,4,5,6,7];
 $evens = array_filter($numbers, function ($value) {
     return ($value % 2 == 0);
@@ -35,11 +38,14 @@ $evens = array_filter($numbers, function ($value) {
 //print_r($evens);
 
 
+// use array routines
 $repeats = [1,1,1,1,1,3,3,3,3,2,2,2,2];
-// print_r(array_unique($repeats));
+print_r(array_unique($repeats));
 // print_r($repeats);
-// sort($repeats);
-// print_r($repeats);
+
+// sorting
+sort($repeats);
+print_r($repeats);
 
 
 //---------------------
@@ -52,4 +58,6 @@ $o[] = new stdclass();
 $o[1]->a = 2;
 $o[1]->b = 'string2';
 
+// select only a member (column) from array of objects
 print_r(array_column($o, 'b'));
+
