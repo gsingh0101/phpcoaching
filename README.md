@@ -7,14 +7,19 @@ For teaching PHP and have fun with PHP
 * Create Arrays
 * Add Array Elements
 * Remove Array Elements
-* Transfer to and from objects
+* Convert to and from objects
+* Useful and common Array function
 
 ### Strings
-
+* Useful and common string function
+* String manipulation
 
 ### Objects
 * StdClass object
 * Create Object
 * Add to Object attribute
 * Remove from Object attribute
-* Transfer to and from arrays
+* Convert to and from arrays
+* Useful and common Object function
+
+### Custom objects (classes) vs stdclass
