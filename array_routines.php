@@ -10,8 +10,19 @@ echo '<pre/>';
 // $a = array('value1', 'value2', 2);
 //$a = ['value1', 'value2', 2];
 
-$a = null;
+// you may convert simple types like int to array
+$a = 1;
+$a = array(1,2,3);
+
+// BUT you cannot access array index on simple types
 // $a = 0; // will not work
+// $a['1'] = 'a'; // will not work
+
+
+// if type is null already, it will be converted to array on the fly, no error in this case
+$a = null; // works
+$a['1'] = 'a'; // works
+
 
 $key = 1;
 //unset($a[$key]);
