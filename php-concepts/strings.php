@@ -42,7 +42,9 @@ echo '<br/>';
 
 
 // find substring in string
-
+$s = "testme in the string";
+$found = strstr($s, "test");
+if ($found) echo 'found <br/>';
 
 // replace string
 $s = "is foo same as bar?";
