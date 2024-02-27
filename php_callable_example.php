@@ -30,56 +30,56 @@ $key++;
 
 // to sort on specific field, use usort and pass function to use for comparing
 
-function sortbyb($obj1, $obj2)
+function sortbyname($obj1, $obj2)
 {
-    if ($obj1->b < $obj2->b) return -1;
-    if ($obj1->b == $obj2->b) return 0;
-    if ($obj1->b > $obj2->b) return 1;
+    if ($obj1->name < $obj2->name) return -1;
+    if ($obj1->name == $obj2->name) return 0;
+    if ($obj1->name > $obj2->name) return 1;
 }
 
-function sortbya($obj1, $obj2)
+function sortbymarks($obj1, $obj2)
 {
-    if ($obj1->a < $obj2->a) return -1;
-    if ($obj1->a == $obj2->a) return 0;
-    if ($obj1->a > $obj2->a) return 1;
+    if ($obj1->marks < $obj2->marks) return -1;
+    if ($obj1->marks == $obj2->marks) return 0;
+    if ($obj1->marks > $obj2->marks) return 1;
 }
 
 class nonstaticclass
 {
-    public function sortbya($obj1, $obj2)
+    public function sortbymarks($obj1, $obj2)
     {
-        if ($obj1->a < $obj2->a) return -1;
-        if ($obj1->a == $obj2->a) return 0;
-        if ($obj1->a > $obj2->a) return 1;
+        if ($obj1->marks < $obj2->marks) return -1;
+        if ($obj1->marks == $obj2->marks) return 0;
+        if ($obj1->marks > $obj2->marks) return 1;
     }
-    public function sortbyb($obj1, $obj2)
+    public function sortbyname($obj1, $obj2)
     {
-	if ($obj1->b < $obj2->b) return -1;
-	if ($obj1->b == $obj2->b) return 0;
-	if ($obj1->b > $obj2->b) return 1;
+        if ($obj1->name < $obj2->name) return -1;
+        if ($obj1->name == $obj2->name) return 0;
+        if ($obj1->name > $obj2->name) return 1;
     }
 }
 $objoffunctions = new nonstaticclass();
 
 class staticclass
 {
-    public static function sortbya($obj1, $obj2)
+    public static function sortbymarks($obj1, $obj2)
     {
-        if ($obj1->a < $obj2->a) return -1;
-        if ($obj1->a == $obj2->a) return 0;
-        if ($obj1->a > $obj2->a) return 1;
+        if ($obj1->marks < $obj2->marks) return -1;
+        if ($obj1->marks == $obj2->marks) return 0;
+        if ($obj1->marks > $obj2->marks) return 1;
     }
-    public static function sortbyb($obj1, $obj2)
+    public static function sortbyname($obj1, $obj2)
     {
-	if ($obj1->b < $obj2->b) return -1;
-	if ($obj1->b == $obj2->b) return 0;
-	if ($obj1->b > $obj2->b) return 1;
+        if ($obj1->name < $obj2->name) return -1;
+        if ($obj1->name == $obj2->name) return 0;
+        if ($obj1->name > $obj2->name) return 1;
     }
 }
 
 // three ways of calling the comparison function
-usort($o, 'staticclass::sortbyb');
-//usort($o, 'sortbyb');
-//usort($o, [$objoffunctions, 'sortbyb']);
+usort($o, 'staticclass::sortbyname');
+//usort($o, 'sortbyname');
+//usort($o, [$objoffunctions, 'sortbyname']);
 
 print_r($o);
