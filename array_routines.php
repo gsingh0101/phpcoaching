@@ -39,7 +39,7 @@ echo 'only addresses <br/>';
 print_r(array_column($o, 'address'));
 
 
-// 5. array_merge()
+// 5. array_merge() - kind of joining 2 arrays into 1
 $a = array('green', 'red', 'yellow');
 $b = array('purple', 'grey', 'pink');
 $c = array_merge($a, $b);
@@ -47,7 +47,7 @@ print_r($c);
 echo '<br/>';
 
 
-// 6. array_combine()
+// 6. array_combine() - use keys from one and values from others
 $a = array('green', 'red', 'yellow');
 $b = array('avocado', 'apple', 'banana');
 $c = array_combine($a, $b);
