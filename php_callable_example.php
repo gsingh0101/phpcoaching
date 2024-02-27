@@ -6,23 +6,23 @@ echo 'Example of user defined functions, passing function as parameters, callabl
 
 $key = 0;
 $o[$key] = new stdclass();
-$o[$key]->a = 1;
-$o[$key]->b = 2;
+$o[$key]->marks = 1;
+$o[$key]->name = 'Foo';
 
 $key++;
 $o[$key] = new stdclass();
-$o[$key]->a = 5;
-$o[$key]->b = 'astring';
+$o[$key]->marks = 5;
+$o[$key]->name = 'Bar';
 
 $key++;
 $o[$key] = new stdclass();
-$o[$key]->a = 2;
-$o[$key]->b = 'zstring';
+$o[$key]->marks = 2;
+$o[$key]->name = 'John';
 
 $key++;
 $o[$key] = new stdclass();
-$o[$key]->a = 10;
-$o[$key]->b = 'string';
+$o[$key]->marks = 10;
+$o[$key]->name = 'Doe';
 $key++;
 
 // default sort below simply sorts on first key, cannot be controlled
