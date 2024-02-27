@@ -20,14 +20,13 @@ class person {
 // create objects instances for this class
 $person1 = new person('name1', 'email1@example.com');
 print_r($person1->name);
+echo '<br>';
 $person2 = new person('name2', 'email2@example.com', 'photopath');
 print_r($person2->email);
-echo PHP_EOL;
+echo '<br>';
 
 echo gettype($person2);
-echo PHP_EOL;
+echo '<br>';
 
 // the below is disabled on phptester.net
 // echo get_class($acasttoObject);
-
-
