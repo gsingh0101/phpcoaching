@@ -34,3 +34,10 @@ echo '<br/>';
 // reverse a string
 print_r(strrev($s));
 echo '<br/>';
+
+// upper case first character
+$name = "Ram Kumar";
+echo ucfirst($name);
+echo '<br/>';
+
+
