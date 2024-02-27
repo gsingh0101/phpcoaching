@@ -41,3 +41,9 @@ echo ucfirst($name);
 echo '<br/>';
 
 
+// find substring in string
+
+
+// replace string
+$s = "is foo same as bar?";
+echo str_replace("foo", "bar", $s);
