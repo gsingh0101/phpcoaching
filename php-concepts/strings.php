@@ -24,9 +24,13 @@ echo '<br/>';
 
 // convert array to comma separated string
 $arr = array(1,2,3,4,5);
-$s = implode(", ", $arr);
+$s = implode("#", $arr);
 print_r($s);
 echo '<br/>';
 
 echo gettype($s);
+echo '<br/>';
+
+// reverse a string
+print_r(strrev($s));
 echo '<br/>';
