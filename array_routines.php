@@ -31,5 +31,8 @@ $o[] = new stdclass();
 $o[1]->id = 2;
 $o[1]->address = 'New Delhi';
 // extract a particular column 'id'
+echo 'only ids <br/>';
 print_r(array_column($o, 'id'));
+echo 'only addresses <br/>';
+print_r(array_column($o, 'address'));
 
