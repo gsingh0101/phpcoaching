@@ -38,3 +38,18 @@ print_r(array_column($o, 'id'));
 echo 'only addresses <br/>';
 print_r(array_column($o, 'address'));
 
+
+// 5. array_merge()
+$a = array('green', 'red', 'yellow');
+$b = array('purple', 'grey', 'pink');
+$c = array_merge($a, $b);
+print_r($c);
+echo '<br/>';
+
+
+// 6. array_combine()
+$a = array('green', 'red', 'yellow');
+$b = array('avocado', 'apple', 'banana');
+$c = array_combine($a, $b);
+print_r($c);
+echo '<br/>';
