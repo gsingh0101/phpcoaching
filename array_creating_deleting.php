@@ -1,7 +1,7 @@
 <?php
 
 echo '<pre/>';
-echo 'CREATING ARRAYS ....';
+echo 'CREATING ARRAYS .... <BR/>';
 
 // creating array
 $a = array('value1', 'value2', 2);
@@ -11,7 +11,7 @@ $a = ['value1', 'value2', 2];
 $a = array('name' => 'Ravi', 'email' => 'ravi@example.com', 'id' => 'CSE01');
 print_r($a);
 
-echo 'REMOVING ARRAY ELEMENTS ....';
+echo 'REMOVING ARRAY ELEMENTS .... <BR/>';
 
 $a = array(0,1,2,3,4,5,6,7);
 // remove 2nd element, with value 1
