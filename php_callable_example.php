@@ -53,11 +53,11 @@ class nonstaticclass
         if ($obj1->a > $obj2->a) return 1;
     }
     public function sortbyb($obj1, $obj2)
-	{
-		if ($obj1->b < $obj2->b) return -1;
-		if ($obj1->b == $obj2->b) return 0;
-		if ($obj1->b > $obj2->b) return 1;
-	}
+    {
+	if ($obj1->b < $obj2->b) return -1;
+	if ($obj1->b == $obj2->b) return 0;
+	if ($obj1->b > $obj2->b) return 1;
+    }
 }
 $objoffunctions = new nonstaticclass();
 
@@ -69,10 +69,17 @@ class staticclass
         if ($obj1->a == $obj2->a) return 0;
         if ($obj1->a > $obj2->a) return 1;
     }
+    public static function sortbyb($obj1, $obj2)
+    {
+	if ($obj1->b < $obj2->b) return -1;
+	if ($obj1->b == $obj2->b) return 0;
+	if ($obj1->b > $obj2->b) return 1;
+    }
 }
-usort($o, 'staticclass::sortbya');
-usort($o, 'sortbya');
-usort($o, [$objoffunctions, 'sortbya']);
 
+// three ways of calling the comparison function
+usort($o, 'staticclass::sortbyb');
+//usort($o, 'sortbyb');
+//usort($o, [$objoffunctions, 'sortbyb']);
 
 print_r($o);
