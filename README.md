@@ -10,16 +10,15 @@ For teaching PHP and have fun with PHP
 * Convert to and from objects
 * Useful and common Array function
 
-### Strings
-* Useful and common string function
-* String manipulation
-
 ### Objects
 * StdClass object
 * Create Object
-* Add to Object attribute
-* Remove from Object attribute
+* Add Object attribute
+* Remove Object attribute
 * Convert to and from arrays
-* Useful and common Object function
 
 ### Custom objects (classes) vs stdclass
+
+### Strings
+* Useful and common string function
+* String manipulation
