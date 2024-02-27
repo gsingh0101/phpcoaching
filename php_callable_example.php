@@ -12,20 +12,23 @@ $o[$key]->b = 2;
 $key++;
 $o[$key] = new stdclass();
 $o[$key]->a = 5;
-$o[$key]->b = 2;
+$o[$key]->b = 'astring';
 
 $key++;
 $o[$key] = new stdclass();
 $o[$key]->a = 2;
-$o[$key]->b = 'zstring1';
+$o[$key]->b = 'zstring';
 
 $key++;
 $o[$key] = new stdclass();
 $o[$key]->a = 10;
-$o[$key]->b = 'string2';
+$o[$key]->b = 'string';
 $key++;
 
-//sort($o);
+// default sort below simply sorts on first key, cannot be controlled
+// sort($o);
+
+// to sort on specific field, use usort and pass function to use for comparing
 
 function sortbyb($obj1, $obj2)
 {
@@ -41,10 +44,22 @@ function sortbya($obj1, $obj2)
     if ($obj1->a > $obj2->a) return 1;
 }
 
-
-//usort($o, 'sortbya');
-// usort($o, [$obj, 'sortbya']);
-
+class nonstaticclass
+{
+    public function sortbya($obj1, $obj2)
+    {
+        if ($obj1->a < $obj2->a) return -1;
+        if ($obj1->a == $obj2->a) return 0;
+        if ($obj1->a > $obj2->a) return 1;
+    }
+    public function sortbyb($obj1, $obj2)
+	{
+		if ($obj1->b < $obj2->b) return -1;
+		if ($obj1->b == $obj2->b) return 0;
+		if ($obj1->b > $obj2->b) return 1;
+	}
+}
+$objoffunctions = new nonstaticclass();
 
 class staticclass
 {
@@ -56,6 +71,8 @@ class staticclass
     }
 }
 usort($o, 'staticclass::sortbya');
+usort($o, 'sortbya');
+usort($o, [$objoffunctions, 'sortbya']);
 
 
 print_r($o);
