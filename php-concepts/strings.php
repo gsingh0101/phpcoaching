@@ -26,7 +26,7 @@ echo '<br/>';
 $arr = array(1,2,3,4,5);
 $s = implode(", ", $arr);
 print_r($s);
-echo typeof($s);
 echo '<br/>';
 
-
+echo gettype($s);
+echo '<br/>';
