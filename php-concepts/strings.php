@@ -35,8 +35,9 @@ echo '<br/>';
 print_r(strrev($s));
 echo '<br/>';
 
+
 // upper case first character
-$name = "Ram Kumar";
+$name = "ram k. sinha";
 echo ucfirst($name);
 echo '<br/>';
 
@@ -45,6 +46,7 @@ echo '<br/>';
 $s = "testme in the string";
 $found = strstr($s, "test");
 if ($found) echo 'found <br/>';
+
 
 // replace string
 $s = "is foo same as bar?";
