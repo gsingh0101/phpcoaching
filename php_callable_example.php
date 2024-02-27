@@ -79,7 +79,13 @@ class staticclass
 
 // three ways of calling the comparison function
 usort($o, 'staticclass::sortbyname');
-//usort($o, 'sortbyname');
-//usort($o, [$objoffunctions, 'sortbyname']);
-
+echo 'sorted by name <br/>';
 print_r($o);
+
+echo 'sorted by marks <br/>';
+usort($o, 'sortbymarks');
+print_r($o);
+
+// usort($o, 'staticclass::sortbyname'); // behave same as above
+//usort($o, [$objoffunctions, 'sortbyname']); // behave same as above
+// print_r($o);
