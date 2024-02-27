@@ -1,9 +1,8 @@
 <?php
 
-//error_reporting(E_WARNING);
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 echo '<pre/>';
+echo 'Example of user defined functions, passing function as parameters, callable user type <br/>';
+
 
 $key = 0;
 $o[$key] = new stdclass();
