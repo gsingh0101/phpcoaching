@@ -1,5 +1,6 @@
 # phpcoaching
 For teaching PHP and have fun with PHP, and Finally master the making of functional and useful websites
+Created for students coming from c background to see how easy it is to manipulate complex types and its related memory management
 
 ## Example for learning PHP data types
 * **Run on online phptester site like phptester.net**
