@@ -1,5 +1,5 @@
 # phpcoaching
-For teaching PHP and have fun with PHP
+For teaching PHP and have fun with PHP, and Finally master the making of actual working websites
 
 ## Example for learning PHP data types
 
