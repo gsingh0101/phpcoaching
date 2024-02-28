@@ -26,3 +26,9 @@ For teaching PHP and have fun with PHP, and Finally master the making of functio
 ### Strings
 * Useful and common string function
 * String manipulation
+
+### PHP Types
+* Understanding PHP Types
+* PHP Typehinting
+* Identical operator
+
