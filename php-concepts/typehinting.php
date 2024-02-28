@@ -24,8 +24,7 @@ function jointhings_using_uniontypes(string|int $a, float $b): string {
     return $a . $b;
 }
 $a = jointhings_using_uniontypes("1abc", 1.1);
-echowitheol($a);
-$a = jointhings_using_uniontypes(1.1, 1.1);
+// $a = jointhings_using_uniontypes(1.1, 1.1); // will not work as first parameter is float
 echowitheol($a);
 
 
